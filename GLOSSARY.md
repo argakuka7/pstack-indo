@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | skill | skill | Unit instruksi yang dapat dipanggil. Pertahankan nama teknisnya. |
 | playbook | playbook | Alur kerja terarah; jangan samakan dengan skill. |
-| blast radius | dampak perubahan | Cakupan bagian yang mungkin terdampak perubahan. |
+| blast radius | - | Dipertahankan dalam bahasa Inggris seperti nama skill/playbook. Artinya dampak perubahan: cakupan bagian yang mungkin terdampak perubahan; sebagai penjelasan, bukan pengganti di prosa. |
 | review | tinjauan | Pemeriksaan perubahan atau hasil kerja. Gunakan `code review` bila nama proses spesifik. |
 | automations | automasi | Fitur/alur otomatis pstack. |
 | agent | agent | Pertahankan pada nama dan konteks teknis pstack. |
