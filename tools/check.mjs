@@ -4,12 +4,8 @@ import { EpubCheck } from "@likecoin/epubcheck-ts";
 import { filename, loadBook } from "./lib/book.mjs";
 
 const problems = [];
-for (const file of readdirSync(".").filter((f) => f.endsWith(".md"))) {
+for (const file of [...readdirSync(".").filter((f) => f.endsWith(".md")).map((f) => f), ...readdirSync("manuscript").filter((f) => f.endsWith(".md")).map((f) => `manuscript/${f}`)]) {
   if (readFileSync(file, "utf8").includes("—")) problems.push(`${file}: em dash is not allowed`);
-}
-for (const file of readdirSync("manuscript").filter((f) => f.endsWith(".md"))) {
-  const source = readFileSync(`manuscript/${file}`, "utf8");
-  if (!source.includes("<!-- TODO: isi bab pada tahap penerjemahan. -->")) problems.push(`${file}: missing scaffold placeholder`);
 }
 const items = loadBook();
 if (items.length !== 37 || items.filter((i) => /-(?:part|ch)-/.test(i.file)).length !== 31) problems.push(`expected 37 files including 31 part/chapter files, found ${items.length}`);
@@ -29,4 +25,4 @@ if (problems.length) {
   console.error(problems.map((p) => `FAIL ${p}`).join("\n"));
   process.exit(1);
 }
-console.log(`style ok; manuscript scaffold ok (${items.length} files, 31 part/chapter files); EPUB valid; PDF signature valid`);
+console.log(`style ok; manuscript ok (${items.length} files, 31 part/chapter files); EPUB valid; PDF signature valid`);
