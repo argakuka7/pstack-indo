@@ -1,0 +1,9 @@
+:root { --serif: "Noto Serif", Georgia, serif; --sans: "Noto Sans", Arial, sans-serif; --mono: "JetBrains Mono", monospace; }
+@page { size: 152mm 225mm; margin: 20mm 17mm 22mm; @bottom-center { content: counter(page); font: 8pt var(--sans); color: #555; } }
+@page :first { @bottom-center { content: none; } }
+body { font-family: var(--serif); font-size: 9.5pt; }
+section { break-before: page; }
+h1 { font-size: 20pt; }
+h2 { font-size: 14pt; break-after: avoid; }
+h3 { font-size: 11pt; break-after: avoid; }
+pre, table { break-inside: avoid; }
