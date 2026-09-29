@@ -1,3 +1,5 @@
-# Titik masuk
+# Mengerjakan
 
-<!-- TODO: isi bab pada tahap penerjemahan. -->
+Bagian ini adalah jantung buku: bagaimana pstack dipakai untuk mengerjakan tugas nyata. Setiap tugas yang tidak sepele masuk lewat pintu yang sama. Menurut [skill poteto-mode](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/poteto-mode/SKILL.md), mode itu mencocokkan tugas dengan satu playbook, membuka todo list yang item-item pertamanya adalah langkah playbook tersebut, disalin apa adanya, lalu merutekan skill lain selagi langkah-langkahnya berjalan. Langkah yang dipilih untuk tidak dikerjakan tetap terlihat di daftar dengan alasan singkatnya.
+
+Bab [poteto-mode](21-ch-poteto-mode.md) membahas mode itu dari dalam: pemicu yang tidak bisa ditawar, indeks prinsip, aturan otonomi, subagent, dan gaya balasan. Bab [Playbook untuk mengerjakan tugas](22-ch-playbooks-work.md) membedah playbook untuk pekerjaan harian, dari bug fix sampai visual parity. Dua bab berikutnya melanjutkan ke playbook yang berkaitan dengan pull request dan pekerjaan panjang.
