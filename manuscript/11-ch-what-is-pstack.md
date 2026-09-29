@@ -46,7 +46,7 @@ Ada dua puluh tiga playbook yang ikut dikirim. Tabel berikut merangkum nama dan 
 | Playbook | Untuk |
 | --- | --- |
 | investigation | pertanyaan baca-saja: bagaimana x bekerja, kenapa y dibangun dengan cara itu, apakah kita yakin. |
-| bug fix | mereproduksi sebuah defect, menelusuri akar masalahnya, lalu memperbaikinya dengan bukti runtime. |
+| bug fix | mereproduksi sebuah bug, menelusuri akar masalahnya, lalu memperbaikinya dengan bukti runtime. |
 | perf | menelusuri kelambatan yang sudah terukur dan memperbaikinya terhadap baseline. |
 | hillclimb | perbaikan satu metrik yang berkelanjutan dan ilmiah terhadap sebuah target, dengan pengulangan hipotesis, pengukuran sebelum/sesudah, dan satu commit per perbaikan yang diterima. |
 | runtime forensics | mendiagnosis gejala live (kebocoran memori, idle-cpu spin, glitch) dari instrumentasi. |
@@ -57,10 +57,10 @@ Ada dua puluh tiga playbook yang ikut dikirim. Tabel berikut merangkum nama dan 
 | visual parity | kesetaraan UI yang persis piksel antara dua implementasi. |
 | authoring a skill | menulis atau menyunting sebuah `SKILL.md`. |
 | eval | menguji secara blinded bagaimana perubahan sebuah skill atau prompt memengaruhi perilaku agent. |
-| babysit | mengantar sebuah PR atau stack sampai siap merge: konflik, thread review, CI. |
-| shipping | memverifikasi secara independen bahwa sebuah stack hijau, lalu mendaratkannya berurutan dari bawah ke atas melalui github secara default, atau origin bila tersedia. |
+| babysit | mengantar sebuah PR atau stack sampai siap merge: konflik, utas tinjauan, CI. |
+| shipping | memverifikasi secara independen bahwa stack-nya hijau, lalu mendaratkannya berurutan dari bawah ke atas melalui github secara default, atau origin bila tersedia. |
 | autonomous run | menggerakkan sebuah tugas panjang sampai selesai tanpa berhenti. |
-| orchestrate | proyek berdiri yang diserahkan ke satu chat koordinator: berhari-hari, banyak PR bertumpuk, armada subagent. |
+| orchestrate | proyek berkelanjutan yang diserahkan ke satu chat koordinator: berhari-hari, banyak PR bertumpuk, armada subagent. |
 | autopilot-full | menjalankan PR-PR independen sampai merged dengan satu pemilik per PR dan satu putaran verdict root swarm di tiap ronde, dimulai dari head yang code-ready. |
 | autopilot-stack | membangun dan memverifikasi satu stack linier pada base branch agar operator meninjaunya dan mendaratkannya. |
 | session pickup | melanjutkan atau mengambil alih pekerjaan in-flight milik agent sebelumnya. |
@@ -100,7 +100,7 @@ Menurut README, `/poteto-mode` bekerja sangat baik dengan command `/loop` milik 
 | `/reflect` | tugas panjang sudah selesai dan Anda ingin resepnya ditangkap sebagai suntingan skill. |
 | `/teach` | Anda ingin benar-benar memahami sebuah perubahan atau subsistem, bukan hanya menerima ringkasannya. Menjalankan `/how` + `/why` dan menenun satu penjelasan lugas yang dibangun diagram demi diagram. |
 | `/tdd` | Anda memperbaiki bug dan ada jalur uji lokal yang murah. Tulis test yang gagal lebih dulu, lalu perbaikannya. |
-| `/no-comments` | Anda mencopot komentar sebelum review; memunculkan Comment Sicko, memperbaiki temuan yang diterima, dan menawarkan encoding untuk constraint yang diklaim. |
+| `/no-comments` | Anda mencopot komentar sebelum tinjauan; memunculkan Comment Sicko, memperbaiki temuan yang diterima, dan menawarkan encoding untuk constraint yang diklaim. |
 | `/typescript-best-practices` | Anda sedang membaca atau menyunting TypeScript. Menerapkan prinsip `type-system-discipline` pada tataran sintaks. |
 | `/figure-it-out` | tidak ada playbook bawaan yang cocok. Merancang playbook yang ketat dan bisa diaudit untuk tugas tersebut. |
 | `/show-me-your-work` | Anda ingin jejak keputusan yang bisa ditinjau. Mencatat keputusan ke sebuah TSV yang bisa di-commit. |
@@ -116,11 +116,11 @@ pstack juga mengirim sebuah subagent yang menjalankan gaya kerja penulisnya dari
 
 `/poteto-mode` dan `subagent_type: "poteto-agent"` dirutekan lewat wrapper yang sama.
 
-pstack juga mengirim Comment Sicko, reviewer komentar baca-saja yang tersedia sebagai `subagent_type: "Comment Sicko"`. Umumnya dipanggil lewat `/no-comments`, bukan secara langsung.
+pstack juga mengirim Comment Sicko, peninjau komentar baca-saja yang tersedia sebagai `subagent_type: "Comment Sicko"`. Umumnya dipanggil lewat `/no-comments`, bukan secara langsung.
 
 ## Skill prinsip
 
-pstack memuat dua puluh tiga skill pendek, satu prinsip per skill. `poteto-mode` mengindeksnya secara inline dan membaca indeks itu di awal tugas. Berkas mandirinya ada agar skill lain bisa merujuk sebuah prinsip berdasarkan namanya, dan agar indeks bisa menunjuk aturan lengkap untuk tiap prinsip. Prinsip-prinsip itu terbagi dalam lima kelompok: core, architecture, verification, delegation, dan meta. Bab Skill prinsip membahasnya satu per satu.
+pstack memuat dua puluh tiga skill pendek, satu prinsip per skill. `poteto-mode` mengindeksnya secara inline dan membaca indeks itu di awal tugas. Berkas mandirinya ada agar skill lain bisa merujuk sebuah prinsip berdasarkan namanya, dan agar indeks bisa menunjuk aturan lengkap untuk tiap prinsip. Prinsip-prinsip itu terbagi dalam lima kelompok: core, architecture, verification, delegation, dan meta. Bab [Skill prinsip](43-ch-principles.md) membahasnya satu per satu.
 
 ## Yang tidak ikut dikirim
 
@@ -140,15 +140,15 @@ Cursor sudah punya plan mode yang bekerja baik bersama pstack. Namun menurut pen
 
 `poteto-mode` adalah gaya penulisnya, dan Anda mungkin tidak menginginkan persis itu. Ketik `/automate-me`. Skill itu menggali transcript terbaru Anda, menyusun drafan skill `<your-name>-mode` dari cara Anda benar-benar bekerja, dan merutekan lewat pstack di bawahnya. Anda tetap memakai pstack sebagai dasar dan mendapat skill perutean Anda sendiri di samping `poteto-mode`.
 
-Model juga bisa diatur. Ketik `/setup-pstack`. Skill itu mendeteksi model yang bisa Anda akses dan menulis satu rule always-applied kecil yang memetakan tiap peran (kode, penilaian, panel review) ke sebuah model. Setiap skill membacanya dan jatuh kembali ke bawaan yang wajar ketika rule tidak ada, sehingga Anda hanya mengganti yang Anda inginkan. Rule yang ditulis sebelum versi 0.15.3 mengunci model bawaan lama; hapus baris peran tersebut, atau hapus filenya, lalu jalankan `/setup-pstack` lagi. Menjalankan ulang mempertahankan setiap peran yang modelnya berbeda dari bawaan.
+Model juga bisa diatur. Ketik `/setup-pstack`. Skill itu mendeteksi model yang bisa Anda akses dan menulis satu rule always-applied kecil yang memetakan tiap peran (kode, penilaian, panel tinjauan) ke sebuah model. Setiap skill membacanya dan jatuh kembali ke bawaan yang wajar ketika rule tidak ada, sehingga Anda hanya mengganti yang Anda inginkan. Rule yang ditulis sebelum versi 0.15.3 mengunci model bawaan lama; hapus baris peran tersebut, atau hapus filenya, lalu jalankan `/setup-pstack` lagi. Menjalankan ulang mempertahankan setiap peran yang modelnya berbeda dari bawaan.
 
-Detail penyiapan dibahas di bab Penyiapan dan penggunaan pertama.
+Detail penyiapan dibahas di bab [Penyiapan dan penggunaan pertama](12-ch-setup.md).
 
 ## Automasi benny
 
 pstack juga mengirim paket automasi [benny](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/automations/benny/) yang masih dorman. benny menyortir laporan masalah dari Slack, lalu mereproduksi dan memperbaiki bug yang terkonfirmasi dengan bukti UI yang nyata. Berkasnya tidak didaftarkan sebagai skill slash.
 
-Untuk menyiapkannya, arahkan Cursor ke `FOR_AGENTS.md` di dalam paket itu. Penyiapan menyalin paket ke repositori target pada `.cursor/automations/benny/`, mengaktifkan pstack di sana untuk skill bersama, dan menjaga konfigurasi pengguna tetap di luar paket yang disalin. Bab benny dan automasi membahasnya lebih dalam.
+Untuk menyiapkannya, arahkan Cursor ke `FOR_AGENTS.md` di dalam paket itu. Penyiapan menyalin paket ke repositori target pada `.cursor/automations/benny/`, mengaktifkan pstack di sana untuk skill bersama, dan menjaga konfigurasi pengguna tetap di luar paket yang disalin. Bab [benny dan automasi](81-ch-benny.md) membahasnya lebih dalam.
 
 ## Lisensi
 

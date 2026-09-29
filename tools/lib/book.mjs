@@ -17,7 +17,7 @@ export function loadBook() {
     const source = readFileSync(`manuscript/${file}`, "utf8");
     const title = source.match(/^#\s+(.+)$/m)?.[1];
     if (!title) throw new Error(`${file}: missing H1 title`);
-    return { file, id: file.replace(/\.md$/, ""), title, source, html: md.render(source.replace(/^#\s+.+\n/, "")) };
+    return { file, id: file.replace(/\.md$/, ""), title, source, html: md.render(source.replace(/^#\s+.+\n/, "")).replaceAll(/href="([^"]+)"/g, (m, href) => files.includes(href) ? `href="${href.slice(0, -3)}.xhtml"` : m) };
   });
   const bodyFiles = items.filter((item) => /-(?:part|ch)-/.test(item.file));
   if (items.length !== 37 || bodyFiles.length !== 31) throw new Error(`expected 37 manuscript files (31 part/chapter files), found ${items.length} (${bodyFiles.length} part/chapter files)`);

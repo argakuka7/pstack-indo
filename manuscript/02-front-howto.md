@@ -4,18 +4,18 @@ pstack bekerja paling baik ketika Anda berhenti memanajemen agent terlalu rinci.
 
 Alur baca buku ini mengikuti urutan berikut:
 
-1. Siapkan pstack. Pasang plugin dan pilih model Anda. Dibahas di bab Penyiapan dan penggunaan pertama.
-2. Arahkan pekerjaan lewat `/poteto-mode`. Berikan satu tujuan dan biarkan ia memilih playbook. Dibahas di bagian Titik masuk.
-3. Pahami kode. Gunakan `/how`, `/why`, `/teach`, dan `/recall` sebelum menyentuh kode apa pun. Dibahas di bagian Memahami.
-4. Rancang perubahan. Gunakan `/architect`, `/arena`, `/swarm`, dan `/interrogate` sebelum kode terkunci pada satu bentuk. Dibahas di bagian Merancang.
-5. Bangun dan rapikan perubahan. Gunakan playbook pembangunan, `/tdd`, `/unslop`, dan `/no-comments`. Dibahas di bagian Memperbaiki dan memverifikasi serta Merapikan tulisan dan kode.
-6. Verifikasi dan terbitkan. Buktikan perilaku pada aplikasi yang sebenarnya, lalu buka pull request yang fokus dan dorong hingga merged. Dibahas di bab Skill verifikasi.
-7. Jalankan pekerjaan saat Anda tidur. Kontrak kerja semalaman, log keputusan yang bisa diaudit, dan playbook yang bekerja melebihi satu agent. Dibahas di bab Menjalankan tugas semalaman.
-8. Arahkan agent dengan nama prinsip. Dua puluh tiga nama yang bisa mengalihkan arah agent di tengah tugas. Dibahas di bab Skill prinsip.
-9. Jadikan milik Anda. Mode Anda sendiri, plus cara menguji perubahan pada sebuah skill. Dibahas di bagian Cara kerja pribadi dan utilitas.
-10. Resep dan jebakan. Prompt untuk disalin dan kesalahan yang sebaiknya dilewati. Dibahas di bab Resep dan jebakan.
+1. Siapkan pstack. Pasang plugin dan pilih model Anda. Dibahas di bab [Penyiapan dan penggunaan pertama](12-ch-setup.md).
+2. Arahkan pekerjaan lewat `/poteto-mode`. Berikan satu tujuan dan biarkan ia memilih playbook. Dibahas di bagian [Titik masuk](20-part-entry.md).
+3. Pahami kode. Gunakan `/how`, `/why`, `/teach`, dan `/recall` sebelum menyentuh kode apa pun. Dibahas di bagian [Memahami](30-part-understand.md).
+4. Rancang perubahan. Gunakan `/architect`, `/arena`, `/swarm`, dan `/interrogate` sebelum kode terkunci pada satu bentuk. Dibahas di bagian [Merancang](40-part-design.md).
+5. Bangun dan rapikan perubahan. Gunakan playbook pembangunan, `/tdd`, `/unslop`, dan `/no-comments`. Dibahas di bagian [Memperbaiki dan memverifikasi](50-part-fix.md) serta [Merapikan tulisan dan kode](60-part-clean.md).
+6. Verifikasi dan terbitkan. Buktikan perilaku pada aplikasi yang sebenarnya, lalu buka pull request yang fokus dan dorong hingga merged. Dibahas di bab [Skill verifikasi](53-ch-verification.md).
+7. Jalankan pekerjaan saat Anda tidur. Kontrak kerja semalaman, log keputusan yang bisa diaudit, dan playbook yang bekerja melebihi satu agent. Dibahas di bab [Menjalankan tugas semalaman](86-ch-overnight.md).
+8. Arahkan agent dengan nama prinsip. Dua puluh tiga nama yang bisa mengalihkan arah agent di tengah tugas. Dibahas di bab [Skill prinsip](43-ch-principles.md).
+9. Jadikan milik Anda. Mode Anda sendiri, plus cara menguji perubahan pada sebuah skill. Dibahas di bagian [Cara kerja pribadi dan utilitas](70-part-yours.md).
+10. Resep dan jebakan. Prompt untuk disalin dan kesalahan yang sebaiknya dilewati. Dibahas di bab [Resep dan jebakan](87-ch-recipes.md).
 
-Baca secara berurutan saat pertama kali. Setelah itu, setiap bagian bisa dibaca sendiri. Lampiran Referensi cepat skill dan Bagan pemilihan skill merangkum keseluruhan isi untuk rujukan singkat.
+Baca secara berurutan saat pertama kali. Setelah itu, setiap bagian bisa dibaca sendiri. Lampiran [Referensi cepat skill](91-app-quickref.md) dan [Bagan pemilihan skill](93-app-decision-flow.md) merangkum keseluruhan isi untuk rujukan singkat.
 
 ## Jika hanya satu hal yang Anda ingat
 

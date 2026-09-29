@@ -20,15 +20,15 @@ Jalankan:
 /setup-pstack
 ```
 
-`/setup-pstack` mendeteksi model yang bisa Anda akses, menanyakan reasoning budget, menampilkan tiap peran (delegasi kode, penilaian, panel review), lalu menanyakan pilihan Anda. Jawab pertanyaannya. Ia menulis `~/.cursor/rules/pstack-models.mdc`, sebuah rule kecil yang dibaca semua skill pstack.
+`/setup-pstack` mendeteksi model yang bisa Anda akses, menanyakan reasoning budget, menampilkan tiap peran (delegasi kode, penilaian, panel tinjauan), lalu menanyakan pilihan Anda. Jawab pertanyaannya. Ia menulis `~/.cursor/rules/pstack-models.mdc`, sebuah rule kecil yang dibaca semua skill pstack.
 
 ### Deteksi model
 
-Sumber deteksi yang andal adalah daftar model slug yang bisa Anda berikan ke subagent `Task` pada sesi itu. Jika Cursor juga memaparkan API atau CLI model yang mencantumkan model berhak Anda, skill itu memakainya untuk melengkapi. Jika tidak ada model yang terdeteksi, ia meminta Anda menempelkan slug yang Anda miliki. Skill itu tidak pernah menulis slug nyata yang belum dipastikan tersedia.
+Sumber deteksi yang andal adalah daftar model slug yang bisa Anda berikan ke subagent `Task` pada sesi itu. Jika Cursor juga memaparkan API atau CLI model yang mencantumkan model yang berhak Anda akses, skill itu memakainya untuk melengkapi. Jika tidak ada model yang terdeteksi, ia meminta Anda menempelkan slug yang Anda miliki. Skill itu tidak pernah menulis slug nyata yang belum dipastikan tersedia.
 
 ### Reasoning budget
 
-Anda memilih dari empat pilihan budget. Pilihan `unlimited` mempertahankan effort max untuk semua peran. Pilihan `large`, `medium`, dan `small` menetapkan token effort setiap slug nyata, termasuk entri panel, menjadi `xhigh`, `high`, atau `medium`. Token effort adalah token terakhir, atau token sebelum `fast` bawaan di akhir, pada tangga `max` > `xhigh` > `high` > `medium` > `low`. Bila hasilnya bukan slug yang terdeteksi, dipakai slug terdeteksi dari keluarga yang sama dengan effort tertinggi di bawah atau sama dengan target; bila tidak ada, peran itu ditandai perlu dipilih.
+Anda memilih dari empat pilihan budget. Pilihan `unlimited` membiarkan effort setiap peran tetap seperti pada tabel bawaan skill, termasuk peran yang dipertahankan saat menjalankan ulang. Pilihan `large`, `medium`, dan `small` menetapkan token effort setiap slug nyata, termasuk entri panel, menjadi `xhigh`, `high`, atau `medium`. Token effort adalah token terakhir, atau token sebelum `fast` bawaan di akhir, pada tangga `max` > `xhigh` > `high` > `medium` > `low`. Bila hasilnya bukan slug yang terdeteksi, dipakai slug terdeteksi dari keluarga yang sama dengan effort tertinggi di bawah atau sama dengan target; bila tidak ada, peran itu ditandai perlu dipilih.
 
 Contoh dari skill sumber: budget `small` mengubah `claude-opus-5-5-max` menjadi `claude-opus-5-5-medium`, dan `grok-4.7-xhigh-fast` menjadi `grok-4.7-medium-fast`.
 
@@ -77,7 +77,7 @@ Anda mungkin bertanya apa yang terjadi bila Anda memakai Auto. Tetapkan sebuah p
 
 Di akhir penyiapan, `/setup-pstack` mencari cara membuktikan perilaku aplikasi di proyek Anda: skill `verify-*` atau harness yang sudah ada. Jika keduanya tidak ada, ia menawarkan satu kali untuk membuatnya lewat `/create-verification-skill`.
 
-Jawab ya dan ia menulis `.cursor/skills/verify-<app>/`, skill lokal-proyek yang mengajari agent mengendarai aplikasi Anda seperti pengguna. Ia membuktikan skill itu bekerja satu kali sebelum menyerahkannya. Jawab tidak dan penyiapan berlanjut. Anda bisa menjalankan `/create-verification-skill` sendiri kapan saja. Bab Skill verifikasi membahas kapan skill itu layak dibuat.
+Jawab ya dan ia menulis `.cursor/skills/verify-<app>/`, skill lokal-proyek yang mengajari agent mengendarai aplikasi Anda seperti pengguna. Ia membuktikan skill itu bekerja satu kali sebelum menyerahkannya. Jawab tidak dan penyiapan berlanjut. Anda bisa menjalankan `/create-verification-skill` sendiri kapan saja. Bab [Skill verifikasi](53-ch-verification.md) membahas kapan skill itu layak dibuat.
 
 Setelah penyiapan, mulai chat baru. Rule model berlaku untuk sesi baru.
 

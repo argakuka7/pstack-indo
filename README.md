@@ -1,6 +1,6 @@
 # Panduan pstack Bahasa Indonesia
 
-Buku panduan tidak resmi tentang plugin pstack karya Lauren Tan untuk Cursor. Repositori ini masih berupa **rangka**: tooling build EPUB/PDF, pedoman gaya, glosarium, atribusi, dan kerangka bab sudah disiapkan. Terjemahan isi belum dimulai.
+Buku panduan tidak resmi tentang plugin pstack karya Lauren Tan untuk Cursor. Repositori ini masih berupa **rangka**: tooling build EPUB/PDF, pedoman gaya, glosarium, atribusi, dan kerangka bab sudah disiapkan. Terjemahan isi sudah berlangsung, dimulai dari batch pembuka ini.
 
 ## Build
 
@@ -16,7 +16,7 @@ Hasilnya ada di `dist/pstack-guide-0.15.5-id.0.epub` dan `dist/pstack-guide-0.15
 
 ## Struktur naskah
 
-`manuscript/` mengikuti susunan berkas edisi Korea: 37 berkas termasuk halaman awal dan lampiran, dengan 31 berkas bagian/bab. Semuanya berisi judul Bahasa Indonesia dan placeholder. Gunakan `STYLE.md` dan `GLOSSARY.md` sebelum menulis naskah.
+`manuscript/` mengikuti susunan berkas edisi Korea: 37 berkas termasuk halaman awal dan lampiran, dengan 31 berkas bagian/bab. Lima berkas batch pembuka sudah memuat terjemahan lengkap; sisanya masih judul Bahasa Indonesia dan placeholder. Gunakan `STYLE.md` dan `GLOSSARY.md` sebelum menulis naskah.
 
 ## Atribusi dan lisensi
 
