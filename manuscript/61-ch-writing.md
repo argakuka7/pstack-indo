@@ -82,4 +82,4 @@ Prosesnya dua langkah: pindai pola-pola di bawah, lalu tulis ulang dengan makna 
 
 ## Kapan memakai yang mana
 
-unslop bekerja pada permukaan prosa apa pun dan selalu diterapkan; technical-writing masuk saat dokumennya sendiri butuh struktur, mulai dari pilihan mode sampai kekalimatannya. Keduanya berlaku pada deskripsi PR dan pesan commit. Hubungannya: technical-writing menerapkan unslop pada setiap dokumen yang disentuhnya, dan usulan pelanggar jargon baru diusulkan sebagai tambahan aturan unslop lewat diff di balasan, bukan dengan menyunting skillnya.
+unslop bekerja pada permukaan prosa apa pun dan selalu diterapkan; technical-writing masuk saat dokumennya sendiri butuh struktur, mulai dari pilihan mode sampai ke kalimatnya. Keduanya berlaku pada deskripsi PR dan pesan commit. Hubungannya: technical-writing menerapkan unslop pada setiap dokumen yang disentuhnya, dan usulan pelanggar jargon baru diusulkan sebagai tambahan aturan unslop lewat diff di balasan, bukan dengan menyunting skillnya.
