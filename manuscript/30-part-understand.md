@@ -1,3 +1,5 @@
 # Memahami
 
-<!-- TODO: isi bab pada tahap penerjemahan. -->
+Menyunting kode yang belum dipahami adalah cara regresi halus ikut terkirim. Menurut [panduan pstack](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/docs/guide/03-understand.md), pstack memberi empat pintu masuk: `/how` menjelaskan apa yang kode lakukan sekarang, `/why` menggali alasan bentuknya seperti itu, `/teach` merajut keduanya menjadi satu penjelasan, dan `/recall` membangun ulang konteks terbaru Anda sendiri atas satu topik. Panduan yang sama memperingatkan jebakannya: agent yang langsung menyunting tanpa model terlacak cenderung memperbaiki gejala di titik pertama yang terlihat masuk akal, dan menjalankan `/how` lebih dulu lebih murah daripada bug kedua.
+
+Bab [how](31-ch-how.md) membedah skill how dari dalam: penilaian kompleksitas, explorer paralel, dan pola penjelasan arsitekturalnya. Bab [why](32-ch-why.md) melanjutkan ke investigasi riwayat: tujuh kategori bukti, investigator per sumber, kerangka epistemika, dan sintesis berbobot keyakinan. Bab [teach dan recall](33-ch-teach-recall.md) menutup dengan dua skill yang saling melengkapi: memberi pemahaman yang utuh dan memulihkan konteks Anda sendiri.
