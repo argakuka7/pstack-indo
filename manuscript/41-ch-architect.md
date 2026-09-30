@@ -47,7 +47,7 @@ Bila implementasi terus menghasilkan gesekan yang tidak bisa diserap sketsa, ske
 - Tipe yang butuh pintu darurat (`any`, cast, field opsional yang praktiknya selalu terisi) agar bisa dikompilasi.
 - Refleks "kita butuh lock" padahal sketsa mengatakan state itu tidak dibagi.
 - Pemanggil harus tahu aturan internal abstraksi untuk memakainya.
-- Dua atau lebih penyimpangan Fase D yang bentuknya sama di seluruh implementasi.
+- Dua atau lebih penyimpangan Fase D yang independen dan bentuknya sama di seluruh implementasi.
 
 Pertimbangan tetap dipakai: beberapa edge case tidak mengutuk sebuah arsitektur, sebagian masalah memang sah rumit, dan kompleksitas di datanya bukan kompleksitas di desainnya. Saat membuang, urutannya: jalankan ulang skill **how** atas yang sudah terbangun; rancang ulang seolah konstrain baru itu asumsi hari pertama menurut redesign-from-first-principles; kurangi sebelum menambah menurut subtract-before-you-add, sketsa baru seharusnya lebih kecil dari sketsa lama sebelum ia membesar; lalu kembali ke Fase B dan jalankan arena lagi.
 

@@ -69,7 +69,7 @@ Tiap brief berdiri sendiri: tujuan, scope, irisan persis atau arm lomba, cara me
 
 ### Fase C: Aggregate
 
-Baca hasil terminalnya. Buang hasil yang tidak mencatat SHA dan metode yang diminta briefnya, lalu jalankan ulang pekerja itu sekali; setelah kegagalan kedua, catat sebagai gap, dan gap tidak dihitung lolos. Untuk cakupan, tiap irisan wajib punya hasil. Untuk lomba, terapkan aturan seleksi yang dideklarasikan di muka: first pass, rank all, atau best-of. Dump mentah pekerja tidak ditempel; simpan tabel hasil ringkas, issue satu baris berbukti, serta gap atau kemunduran yang eksplisit.
+Baca hasil akhir tiap pekerja. Buang hasil yang tidak mencatat SHA dan metode yang diminta briefnya, lalu jalankan ulang pekerja itu sekali; setelah kegagalan kedua, catat sebagai gap, dan gap tidak dihitung lolos. Untuk cakupan, tiap irisan wajib punya hasil. Untuk lomba, terapkan aturan seleksi yang dideklarasikan di muka: first pass, rank all, atau best-of. Dump mentah pekerja tidak ditempel; simpan tabel hasil ringkas, issue satu baris berbukti, serta gap atau kemunduran yang eksplisit.
 
 ### Fase D: Report
 
