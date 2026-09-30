@@ -63,7 +63,7 @@ Skill ini menyebarkan N pekerja cloud paralel. Mereka bisa menjangkau irisan ter
 
 ### Fase B: Fan out
 
-Semua N pekerja di-spawn dalam satu pesan dengan `subagent_type: generalPurpose`, `environment: "cloud"`, `run_in_background: true`, dan model langkah 4. `environment: "local"` hanya dipakai bila pekerja butuh akses ke sesuatu di komputer pengguna. Bila seorang pekerja harus mulai dari branch non-bawaan yang sudah dipush, lewatkan `cloud_base_branch`.
+Semua N pekerja di-spawn dalam satu pesan dengan `subagent_type: generalPurpose`, `environment: "cloud"`, `run_in_background: true`, dan model langkah 4. `environment: "local"` hanya dipakai bila pekerja butuh akses ke sesuatu di komputer pengguna. Bila seorang pekerja harus mulai dari branch non-bawaan yang sudah dipush, berikan `cloud_base_branch`.
 
 Tiap brief berdiri sendiri: tujuan, scope, irisan persis atau arm lomba, cara memverifikasi, dan apa yang dilaporkan. Laporan memakai `PASS`, `ISSUES`, atau `BLOCKED` dengan bukti. Pekerja yang bisa membuktikan sebuah defect melaporkan `ISSUES` dan mendaftar semua issue yang bisa dibuktikannya, bukan hanya yang pertama. Bila seorang pekerja gagal, lanjut dengan N-1 dan catat.
 

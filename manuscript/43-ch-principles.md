@@ -2,7 +2,7 @@
 
 pstack memuat dua puluh tiga skill pendek, satu prinsip per skill, di folder `principle-*`. Menurut [README pstack](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/README.md), `poteto-mode` mengindeksnya secara inline dan membaca indeks itu di awal tugas, sedangkan berkas mandirinya ada agar skill lain bisa merujuk sebuah prinsip berdasarkan namanya dan agar indeks bisa menunjuk aturan lengkapnya. Aturan [poteto-mode](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/poteto-mode/SKILL.md) juga mensyaratkan berkas daun sebuah prinsip dibaca penuh sebelum prinsip itu diterapkan atau dikutip.
 
-Bab ini merangkum tiap prinsip dalam satu entri: inti aturannya, kapan berlaku, dan pelanggaran khasnya menurut berkas sumbernya. Nama subbagian adalah nama foldernya, dan indeks poteto-mode membagi kedua puluh tiga prinsip itu ke dalam lima grup: core, architecture, verification, delegation, dan meta. Rangkuman ini pengganti navigasi, bukan pengganti berkas daun; aturan penuh tiap prinsip tetap di SKILL.md masing-masing.
+Bab ini merangkum tiap prinsip dalam satu entri: inti aturannya, kapan berlaku, dan pelanggaran khasnya menurut berkas sumbernya. Nama subbagian adalah nama foldernya, dan indeks poteto-mode membagi dua puluh tiga prinsip itu ke dalam lima grup: core, architecture, verification, delegation, dan meta. Rangkuman ini pengganti navigasi, bukan pengganti berkas daun; aturan penuh tiap prinsip tetap di SKILL.md masing-masing.
 
 ## Grup core
 
