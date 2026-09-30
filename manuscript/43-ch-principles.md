@@ -54,7 +54,7 @@ Intinya: enkode domain nyata ke dalam struktur data, misalnya state machine, mod
 
 ### [principle-boundary-discipline](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/principle-boundary-discipline/SKILL.md)
 
-Intinya: validasi, pengeturan tipe, dan penanganan error dipusatkan di batas sistem seperti argumen CLI, config, API eksternal, dan protokol jaringan; di dalam sistem tipenya dipercaya; logika bisnis hidup di fungsi murni dengan shell yang tipis dan mekanis. Berlaku saat memasang validasi, error handling, atau adapter framework. Pelanggaran khasnya: validasi berulang jauh di dalam rantai pemanggilan padahal batas sudah memvalidasi, re-export tipe transport, penyimpanan, atau wire lewat permukaan publik, dan logika bisnis yang menyatu dengan wiring framework sehingga tak teruji tanpanya.
+Intinya: validasi, penyempitan tipe, dan penanganan error dipusatkan di batas sistem seperti argumen CLI, config, API eksternal, dan protokol jaringan; di dalam sistem tipenya dipercaya; logika bisnis hidup di fungsi murni dengan shell yang tipis dan mekanis. Berlaku saat memasang validasi, error handling, atau adapter framework. Pelanggaran khasnya: validasi berulang jauh di dalam rantai pemanggilan padahal batas sudah memvalidasi, re-export tipe transport, penyimpanan, atau wire lewat permukaan publik, dan logika bisnis yang menyatu dengan wiring framework sehingga tak teruji tanpanya.
 
 ### [principle-type-system-discipline](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/principle-type-system-discipline/SKILL.md)
 
@@ -94,7 +94,7 @@ Intinya: test memanggil kode sebagaimana penggunanya memanggilnya dan meng-asser
 
 ### [principle-guard-the-context-window](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/principle-guard-the-context-window/SKILL.md)
 
-Intinya: context window terbatas dan tak terbarukan dalam satu sesi, dan tiap token harus sepadan biayanya; rutekan payload besar ke subagent dan simpan ringkasannya di thread utama, bukan datanya mentah. Berlaku saat konteks mengisi: keluaran besar, berkas panjang, bacaan berulang, dan perencanaan fan-out. Pelanggaran khasnya: output verbose, screenshot, dan dokumen besar masuk ke konteks utama, serta templat dan referensi yang dipakai tiap invocation ditaruh di berkas terpisah yang menagih satu pembacaan tiap kali.
+Intinya: context window terbatas dan tak terbarukan dalam satu sesi, dan tiap token harus sepadan biayanya; rutekan payload besar ke subagent dan simpan ringkasannya di thread utama, bukan datanya mentah. Berlaku saat konteks mengisi: keluaran besar, berkas panjang, bacaan berulang, dan perencanaan fan-out. Pelanggaran khasnya: output verbose, screenshot, dan dokumen besar masuk ke konteks utama, serta templat dan referensi yang dipakai tiap pemanggilan ditaruh di berkas terpisah yang menagih satu pembacaan tiap kali.
 
 ### [principle-never-block-on-the-human](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/principle-never-block-on-the-human/SKILL.md)
 
