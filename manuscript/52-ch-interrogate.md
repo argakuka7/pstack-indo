@@ -1,6 +1,6 @@
 # interrogate: beberapa model memeriksa diff
 
-Bab ini membedah [skill interrogate](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/interrogate/SKILL.md) dari dalam: tinjauan adversarial oleh beberapa model sekaligus, dengan satu reviewer per model, rubrik yang sama, dan satu putusan tersintesis. Frontmatternya menandai `disable-model-invocation: true`, jadi skill aktif lewat panggilan eksplisit seperti `/interrogate` atau kalimat pemicu "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", atau "tear this apart". Contoh pemakaiannya dari panduan pstack:
+Bab ini membedah [skill interrogate](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/skills/interrogate/SKILL.md) dari dalam: tinjauan adversarial oleh beberapa model sekaligus, dengan satu reviewer per model, rubrik yang sama, dan satu putusan tersintesis. Frontmatternya menandai `disable-model-invocation: true`, jadi skill aktif lewat panggilan eksplisit seperti `/interrogate` atau kalimat pemicu "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", atau "tear this apart". Contoh pemakaiannya dari [panduan pstack](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/docs/guide/04-design.md):
 
 ```text
 /interrogate the whole branch, but skeptically. no nitpicks unless it's an actual bug or regression.
@@ -61,4 +61,4 @@ Di sisi lain, temuan yang tidak nyaman jangan otomatis dibuang; itu justru gunan
 
 ## Format keluaran
 
-Putusan disajikan dalam struktur tetap: Intent (paragraf intensi yang dinyatakan), Reviewers (satu butir per reviewer: label, nama model, jumlah temuan), Act On, Consider, Noted, Dismissed, dan Agreement Map yang memetakan di mana model sepakat, di mana mereka berbeda, dan apa pola setuju dan tidak setujunya bicara tentang kode itu. Panduan pstack menutup pemakaian biasanya dengan satu pengingat: baca juga bagian penolakannya. Lead adalah insinyur senior yang pragmatis, bukan orakel, dan Anda bisa menggantikannya.
+Putusan disajikan dalam struktur tetap: Intent (paragraf intensi yang dinyatakan), Reviewers (satu butir per reviewer: label, nama model, jumlah temuan), Act On, Consider, Noted, Dismissed, dan Agreement Map yang memetakan di mana model sepakat, di mana mereka berbeda, dan apa pola setuju dan tidak setujunya bicara tentang kode itu. [Panduan pstack](https://github.com/cursor/plugins/blob/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack/docs/guide/04-design.md) menutup pemakaian biasanya dengan satu pengingat: baca juga bagian penolakannya. Lead adalah insinyur senior yang pragmatis, bukan orakel, dan Anda bisa menggantikannya.
