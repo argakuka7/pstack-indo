@@ -1,3 +1,10 @@
 node_modules/
 build/
 dist/
+site/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/*.md
+!docs/index.md
+docs/public/*.epub
+docs/public/*.pdf
