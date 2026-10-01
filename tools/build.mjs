@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import JSZip from "jszip";
 import puppeteer from "puppeteer-core";
@@ -51,4 +51,12 @@ if (target === "all" || target === "pdf") {
       console.log(`pdf: ${filename("pdf")} (Chrome)`);
     } finally { await browser.close(); }
   }
+}
+
+// publish step: make build/ a self-contained site root (Netlify publish dir)
+mkdirSync("build", { recursive: true });
+if (existsSync("build/book.html")) copyFileSync("build/book.html", "build/index.html");
+for (const ext of ["epub", "pdf"]) {
+  const name = filename(ext);
+  if (existsSync(`dist/${name}`)) copyFileSync(`dist/${name}`, `build/${name}`);
 }
