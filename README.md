@@ -1,6 +1,6 @@
 # Panduan pstack Bahasa Indonesia
 
-Buku panduan tidak resmi tentang plugin pstack karya Lauren Tan untuk Cursor. Tooling build EPUB/PDF, pedoman gaya, glosarium, atribusi, dan seluruh naskah terjemahan sudah lengkap: setiap berkas di `manuscript/` sudah memuat terjemahan isi dari sumber asli.
+Buku panduan tidak resmi tentang plugin pstack karya Lauren Tan untuk Cursor. Buku ini bisa dibaca daring di https://pstack-indo.netlify.app/. Tooling build EPUB/PDF, pedoman gaya, glosarium, atribusi, dan seluruh naskah terjemahan sudah lengkap: setiap berkas di `manuscript/` sudah memuat terjemahan isi dari sumber asli.
 
 ## Build
 
@@ -13,6 +13,8 @@ bun run check
 ```
 
 Hasilnya ada di `dist/pstack-guide-0.15.5-id.0.epub` dan `dist/pstack-guide-0.15.5-id.0.pdf`. Untuk membangun satu format, gunakan `bun tools/build.mjs epub` atau `bun tools/build.mjs pdf`. Jika browser tidak terdeteksi otomatis, atur `CHROME_PATH` ke executable Chrome/Chromium.
+
+Build juga mengisi `build/` sebagai akar situs yang dipublish Netlify lewat `netlify.toml` di akar repositori: `index.html` memuat seluruh buku dengan tautan antarbagian sebagai anchor, EPUB selalu disalin ke `build/`, dan PDF hanya disalin bila ia dibangun dengan Chrome.
 
 ## Struktur naskah
 
