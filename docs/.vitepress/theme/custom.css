@@ -92,3 +92,8 @@
   border-left-width: 4px;
   border-left-color: var(--vp-c-brand-1);
 }
+
+/* Tampilkan footer juga di halaman dokumen ber-sidebar (VitePress menyembunyikannya secara default) */
+.VPFooter.has-sidebar {
+  display: block !important;
+}

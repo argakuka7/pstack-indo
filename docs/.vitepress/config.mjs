@@ -80,7 +80,8 @@ export default defineConfig({
           { text: "Edisi PDF", link: "/pstack-guide-0.15.5-id.0.pdf" }
         ]
       },
-      { text: "GitHub", link: "https://github.com/cursor/plugins/tree/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack" }
+      { text: "GitHub", link: "https://github.com/cursor/plugins/tree/adf3218ca2f5b9971eedc07a76bef22df7701539/pstack" },
+      { text: "created by www.argakuka.com", link: "https://www.argakuka.com" }
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/madearga/pstack-indo" }
@@ -115,7 +116,7 @@ export default defineConfig({
     darkModeSwitchTitle: "Beralih ke mode gelap",
     returnToTopLabel: "Kembali ke atas",
     footer: {
-      message: "Edisi Bahasa Indonesia tidak resmi · Berdasarkan naskah asli Lauren Tan",
+      message: 'created by <a href="https://www.argakuka.com" target="_blank" rel="noopener noreferrer">www.argakuka.com</a> · Edisi Bahasa Indonesia tidak resmi · Berdasarkan naskah asli Lauren Tan',
       copyright: "Lisensi MIT · Metadata sumber v0.15.5"
     }
   }
